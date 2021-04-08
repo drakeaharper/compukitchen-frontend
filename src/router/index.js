@@ -2,6 +2,16 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 
+import Login from '../views/authentication/Login.vue'
+import Register from '../views/authentication/Register.vue'
+
+import CreateItem from '../views/admin/CreateItem.vue'
+import EditItem from '../views/admin/EditItem.vue'
+import ManageKitchen from '../views/admin/ManageKitchen.vue'
+import ProcessSubmission from '../views/admin/ProcessSubmission.vue'
+import Shop from '../views/general/Shop.vue'
+import OrderHistory from '../views/general/OrderHistory.vue'
+
 Vue.use(VueRouter)
 
 const routes = [
@@ -11,11 +21,48 @@ const routes = [
     component: Home
   },
   {
+    path: '/login',
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: Register
+  },
+  {
+    path: '/create_item',
+    name: 'CreateItem',
+    component: CreateItem
+  },
+  {
+    path: '/edit_item',
+    name: 'EditItem',
+    component: EditItem
+  },
+  {
+    path: '/manage_kitchen',
+    name: 'ManageKitchen',
+    component: ManageKitchen
+  },
+  {
+    path: '/process_submission',
+    name: 'ProcessSubmission',
+    component: ProcessSubmission
+  },
+  {
+    path: '/shop',
+    name: 'Shop',
+    component: Shop
+  },
+  {
+    path: '/order_history',
+    name: 'OrderHistory',
+    component: OrderHistory
+  },
+  {
     path: '/about',
     name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   }
 ]
