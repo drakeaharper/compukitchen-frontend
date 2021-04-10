@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page-content-holder p-2">
         <h1>Register</h1>
         <form class="custom-form" v-on:submit.prevent="onSubmit">
             <div class="form-group">
@@ -46,10 +46,10 @@
                     first: this.first,
                     last: this.last
                 }
-                const registerPromise = auth.registerUser(user);
-                const loginPromise = auth.login(user);
-                await Promise.all([registerPromise, loginPromise]);
-                this.$router.push({ name: 'home' });
+                const registerPromise = auth.registerUser(user)
+                const loginPromise = auth.login(user)
+                await Promise.all([registerPromise, loginPromise])
+                this.$router.push({ name: 'home' })
             }
         }
     }

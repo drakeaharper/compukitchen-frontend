@@ -1,17 +1,8 @@
 <template>
-  <div id="custom-home">
-    <HelloWorld />
+  <div id="custom-home"  class="page-content-holder p-2">
+    <h3>Welcome to the Compukitchen</h3>
   </div>
 </template>
 
 <script>
-  // @ is an alias to /src
-  import HelloWorld from '@/components/HelloWorld.vue'
-
-  export default {
-    name: 'home',
-    components: {
-      HelloWorld
-    }
-  }
 </script>

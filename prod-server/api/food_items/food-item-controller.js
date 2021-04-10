@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.index = index;
 exports.getById = getById;
+exports.deleteItem = deleteItem;
 exports.update = update;
 exports.create = create;
 
@@ -37,6 +38,18 @@ function getById(req, res) {
     return res.status(200).json({
       food_item: food_item
     });
+  });
+}
+
+function deleteItem(req, res) {
+  _item_model.default.deleteOne({
+    _id: req.params.id
+  }, (error, food_item) => {
+    if (error) {
+      return res.status(500).json();
+    }
+
+    return res.status(200).json();
   });
 }
 

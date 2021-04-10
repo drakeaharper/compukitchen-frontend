@@ -1,5 +1,5 @@
 <template>
-    <div class="view-container">
+    <div class="page-content-holder p-2">
         <h1>Login</h1>
         <form class="custom-form" v-on:submit.prevent="onSubmit">
             <div class="form-group">
@@ -34,8 +34,8 @@
                     username: this.username,
                     password: this.password
                 }
-                await auth.login(user);
-                this.$router.push({ name: 'home' });
+                await auth.login(user)
+                this.$router.push({ name: 'home' })
             }
         }
     }

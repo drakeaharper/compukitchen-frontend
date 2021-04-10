@@ -20,7 +20,6 @@ export default new Vuex.Store({
         state.userId = auth.getUserId()
         state.isAdmin = (auth.isAdmin() === 'admin')
         state.name = auth.getName()
-        console.log(state)
       } else {
         state.username = null
         state.userId = null

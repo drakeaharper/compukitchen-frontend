@@ -20,6 +20,16 @@ export function getById(req, res) {
     })
 }
 
+export function deleteItem(req, res) {
+    Item.deleteOne({_id: req.params.id}, (error, food_item) => {
+        if (error) {
+            return res.status(500).json()
+        }
+
+        return res.status(200).json()
+    })
+}
+
 export function update(req, res) {
     const validation = validateItem(req.body.updated_item)
 

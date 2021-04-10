@@ -1,42 +1,6 @@
 <template>
-    <div>
+    <div class="page-content-holder p-2">
         <h1>This is the PROCESS SUBMISSION view</h1>
-        <!--<div class="border mx-2 my-3 px-2 pt-2" v-for="month of order_history" v-bind:key="month.month_name">
-            {{ month.month_name }} {{ month.year }} - {{ month.user }}
-            <div class="border mx-3 my-3 px-2 pt-2" v-for="order of month.orders" v-bind:key="order.order_date">
-                <div>{{ order.order_date }}</div>
-                <div class="row mx-3 my-2">
-                    <div class="col-sm font-weight-bold">
-                        Name
-                    </div>
-                    <div class="col-sm font-weight-bold">
-                        Price
-                    </div>
-                    <div class="col-sm font-weight-bold">
-                        Item Quantity
-                    </div>
-                </div>
-                <div v-for="item of order.food_items" v-bind:key="item.name">
-                    <div class="row mx-3 my-2">
-                        <div class="col-sm">
-                            {{ item.name }}
-                        </div>
-                        <div class="col-sm">
-                            ${{ item.price.toFixed(2) }}
-                        </div>
-                        <div class="col-sm">
-                            {{ item.quantity }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="d-flex flex-row-reverse">
-                <button type="button" class="mb-3 mr-3 btn btn-outline-success font-weight-bold">
-                    Process
-                </button>
-            </div>
-        </div>-->
-
         <div class="mx-2 my-3 px-2 pt-2">
             <div class="row">
                 <div class="col-sm font-weight-bold">User</div>
@@ -180,9 +144,8 @@
             .then(res => {
                 next(vm => {
                     vm.submissions = res.data.submissions
-                    console.log(res.data)
-                });
-            });
+                })
+            })
         },
         methods: {
             processSubmission: async function (sub) {

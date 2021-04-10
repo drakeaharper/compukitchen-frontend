@@ -11,7 +11,7 @@ import '@/assets/base_styles.css'
 
 Vue.config.productionTip = false
 
-Vue.use(BootstrapVue);
+Vue.use(BootstrapVue)
 
 new Vue({
   router,

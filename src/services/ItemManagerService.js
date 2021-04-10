@@ -15,3 +15,7 @@ export function getItem(id) {
 export function updateItem(updated_item, id) {
     return http().put(`/api/food_item/${id}`, {id: id, updated_item: updated_item})
 }
+
+export function deleteItem(id) {
+    return http().delete(`/api/food_item/${id}`)
+}

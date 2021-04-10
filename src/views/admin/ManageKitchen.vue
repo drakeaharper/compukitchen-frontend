@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page-content-holder p-2">
         <h1>This is the MANAGE KITCHEN view</h1>
         <div class="row mx-3 my-2">
             <div class="col-sm font-weight-bold">
@@ -45,9 +45,9 @@
             item_manager.listFoodItems()
             .then(res => {
                 next(vm => {
-                    vm.food_items = res.data.food_items;
-                });
-            });
+                    vm.food_items = res.data.food_items
+                })
+            })
         }
     }
 </script>

@@ -1,10 +1,15 @@
 * {
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 body {
-    background-color: black;
+    background-image: url('./wood-2045380_1920.jpg');
     height: 100%;
+}
+
+.page-content-holder {
+    background-color: white;
+    opacity: .8;
 }
 
 #view-container {

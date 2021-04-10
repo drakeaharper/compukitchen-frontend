@@ -1,8 +1,22 @@
 <template>
-    <div>
+    <div class="page-content-holder p-2">
         <h1>This is the ORDER HISTORY view</h1>
         <div class="border mx-2 my-3 px-2 pt-2" v-for="month of order_history" v-bind:key="month.month_name">
-            {{ month.month_name }} {{ month.year }}
+            <p class="display-4">{{ month.month_name }} {{ month.year }}</p>
+            <div class="d-flex flex-row-reverse flex-wrap-reverse">
+                <h3 class="mr-5">${{ parseFloat(month.month_cost).toFixed(2) }}</h3>
+                <h3 class="font-weight-bold mr-3">Month Total:</h3>
+            </div>
+            <div class="d-flex flex-row-reverse flex-wrap-reverse">
+                <button
+                    type="button"
+                    @click="submit(month.month_name, month.month_cost, month.month_number)"
+                    class="mb-3 mr-3 btn btn-outline-success font-weight-bold"
+                    v-bind:class="{disabled: month.submitted}"
+                >
+                    {{ month.workflow_sate }}
+                </button>
+            </div>
             <div class="border mx-3 my-3 px-2 pt-2" v-for="order of month.items" v-bind:key="order.order_date">
                 <div>{{ order.order_date }}</div>
                 <div class="row mx-3 my-2">
@@ -33,13 +47,6 @@
                     <div class="mr-5">${{ parseFloat(order.total_cost).toFixed(2) }}</div>
                     <div class="font-weight-bold mr-3">Order Cost:</div>
                 </div>
-            </div>
-            <div class="d-flex flex-row-reverse">
-                <button type="button" @click="submit(month.month_name, month.month_cost, month.month_number)" class="mb-3 mr-3 btn btn-outline-success font-weight-bold" v-bind:class="{disabled: month.submitted}">
-                    {{ month.workflow_sate }}
-                </button>
-                <div class="mr-5">${{ parseFloat(month.month_cost).toFixed(2) }}</div>
-                <div class="font-weight-bold mr-3">Month Total:</div>
             </div>
         </div>
     </div>
@@ -75,7 +82,7 @@
             order_manager.getUserOrders(to.params.id)
             .then(res => {
                 let sorted_orders = {}
-                let unsorted_orders = res.data.order_history;
+                let unsorted_orders = res.data.order_history
                 let month_names = ["make index 1 based", "January","February","March","April","May","June","July","August","September","October","November","December"]
                 unsorted_orders.forEach(order => {
                     if (sorted_orders[order.createdAt.slice(5,7)] === undefined) {
@@ -110,7 +117,6 @@
                 }
                 next(vm => {
                     vm.order_history = sorted
-                    console.log(sorted)
                 })
             })
         },

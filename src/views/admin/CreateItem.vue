@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page-content-holder p-2">
         <h1>This is the CREATE ITEM view</h1>
         <form class="custom-form" v-on:submit.prevent="onSubmit">
             <div class="form-group">
@@ -42,7 +42,7 @@
                 }
 
                 await item_manager.createItem(new_item)
-                this.$router.push({ name: 'ManageKitchen' });
+                this.$router.push({ name: 'ManageKitchen' })
             }
         }
     }

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="page-content-holder p-2">
         <h1>This is the SHOP view</h1>
         <div class="d-flex">
             <div class="mx-3 my-2" style="width: 50%;">
@@ -63,7 +63,7 @@
                         Remove
                     </button>
                 </div>
-                <div v-if="Object.keys(cart_items).length !== 0" class="d-flex">
+                <div v-if="Object.keys(cart_items).length !== 0" class="d-flex row">
                     <div class="col-sm font-weight-bold">
                         Total Cost:
                     </div>
@@ -104,8 +104,8 @@
                 })
                 let temp = available.filter(a => a !== undefined)
                 vm.food_items = temp
-                });
-            });
+                })
+            })
         },
         methods: {
             addToCart: function (item) {
@@ -150,7 +150,7 @@
             },
             checkout: async function () {
                 await order_manager.checkout(this.cart_items, this.$store.state.userId, this.total_cost)
-                this.$router.push({ name: 'OrderHistory' , params: { id: this.$store.state.userId } });
+                this.$router.push({ name: 'OrderHistory' , params: { id: this.$store.state.userId } })
             }
         }
     }

@@ -69,14 +69,14 @@
 </template>
 
 <script>
-    import * as auth from '../services/AuthService';
+    import * as auth from '../services/AuthService'
 
     export default {
         name: 'Navbar',
         methods: {
             logout: function() {
-                auth.logout();
-                this.$router.push({ name: 'Home' });
+                auth.logout()
+                this.$router.push({ name: 'Home' })
             }
         }
     }
