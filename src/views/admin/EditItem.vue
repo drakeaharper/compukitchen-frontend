@@ -1,5 +1,5 @@
 <template>
-    <div class="page-content-holder p-2">
+    <div class="page-content-holder p-2 m-2">
         <h1>This is the EDIT ITEM view</h1>
         <form class="custom-form" v-on:submit.prevent="onSubmit">
             <div class="form-group">

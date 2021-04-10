@@ -1,5 +1,5 @@
 <template>
-    <div class="page-content-holder p-2">
+    <div class="page-content-holder p-2 m-2">
         <h1>This is the SHOP view</h1>
         <div class="d-flex">
             <div class="mx-3 my-2" style="width: 50%;">

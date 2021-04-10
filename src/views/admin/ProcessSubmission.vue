@@ -1,5 +1,5 @@
 <template>
-    <div class="page-content-holder p-2">
+    <div class="page-content-holder p-2 m-2">
         <h1>This is the PROCESS SUBMISSION view</h1>
         <div class="mx-2 my-3 px-2 pt-2">
             <div class="row">

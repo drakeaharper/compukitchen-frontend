@@ -1,5 +1,5 @@
 <template>
-    <div class="page-content-holder p-2">
+    <div class="page-content-holder p-2 m-2">
         <h1>This is the ORDER HISTORY view</h1>
         <div class="border mx-2 my-3 px-2 pt-2" v-for="month of order_history" v-bind:key="month.month_name">
             <p class="display-4">{{ month.month_name }} {{ month.year }}</p>

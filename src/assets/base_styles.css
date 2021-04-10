@@ -10,7 +10,9 @@ body {
 .page-content-holder {
     background-color: white;
     opacity: .8;
+    border-radius: 30px;
 }
+
 
 #view-container {
     padding-top: 100px;
