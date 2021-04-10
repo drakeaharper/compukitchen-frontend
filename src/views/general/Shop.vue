@@ -4,7 +4,7 @@
         <div class="d-flex">
             <div class="mx-3 my-2" style="width: 50%;">
                 <h3 class="mx-1">What's in the kitchen</h3>
-                <div class="row mx-3 my-2">
+                <div class="row mx-3 my-2 mb-2">
                     <div class="col-sm font-weight-bold">
                         Name
                     </div>
@@ -99,12 +99,17 @@
             item_manager.listFoodItems()
             .then(res => {
                 next(vm => {
-                    vm.food_items = res.data.food_items;
+                    let available = res.data.food_items.map(item => {
+                    return (item.quantity > 0 ) ? item : undefined
+                })
+                let temp = available.filter(a => a !== undefined)
+                vm.food_items = temp
                 });
             });
         },
         methods: {
             addToCart: function (item) {
+                if (item.quantity === 0) { return }
                 this.food_items.forEach(i => {
                     if (item.name === i.name) {
                         if (this.cart_items[item.name] !== undefined) {
