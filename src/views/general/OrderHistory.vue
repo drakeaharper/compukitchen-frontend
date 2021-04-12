@@ -1,8 +1,17 @@
 <template>
-    <div class="page-content-holder p-2 m-2">
+    <div id="order_history_parent" class="page-content-holder p-2 m-2">
         <h1>This is the ORDER HISTORY view</h1>
-        <div class="border mx-2 my-3 px-2 pt-2" v-for="month of order_history" v-bind:key="month.month_name">
-            <p class="display-4">{{ month.month_name }} {{ month.year }}</p>
+        <div class="border border-dark mx-2 my-3 px-2 pt-2" v-for="month of order_history" v-bind:key="month.month_name">
+            <a
+                class="order-history-collapse-anchor"
+                data-toggle="collapse"
+                :data-target="`#collapse${month.month_name}`"
+            >
+                <p class="display-4 order-history-collapse-anchor-text">
+                    {{ month.month_name }} {{ month.year }}
+                    <i class="fas fa-angle-down rotate-icon"></i>
+                </p>
+            </a>
             <div class="d-flex flex-row-reverse flex-wrap-reverse">
                 <h3 class="mr-5">${{ parseFloat(month.month_cost).toFixed(2) }}</h3>
                 <h3 class="font-weight-bold mr-3">Month Total:</h3>
@@ -17,7 +26,12 @@
                     {{ month.workflow_sate }}
                 </button>
             </div>
-            <div class="border mx-3 my-3 px-2 pt-2" v-for="order of month.items" v-bind:key="order.order_date">
+            <div
+                class="border border-dark mx-3 my-3 px-2 pt-2 collapse"
+                :id="`collapse${month.month_name}`"
+                v-for="order of month.items"
+                v-bind:key="order.order_date"
+            >
                 <div>{{ order.order_date }}</div>
                 <div class="row mx-3 my-2">
                     <div class="col-sm font-weight-bold">

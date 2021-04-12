@@ -63,7 +63,7 @@
                         Remove
                     </button>
                 </div>
-                <div v-if="Object.keys(cart_items).length !== 0" class="d-flex row">
+                <div v-if="Object.keys(cart_items).length !== 0" class="d-flex row mx-3">
                     <div class="col-sm font-weight-bold">
                         Total Cost:
                     </div>
@@ -72,7 +72,7 @@
                     </div>
                     <div class="col-sm">
                     </div>
-                    <button type="button" @click="checkout()" class="col-sm mx-3 mb-2 btn btn-outline-success font-weight-bold">
+                    <button type="button" @click="checkout()" class="col-sm mb-2 btn btn-outline-success font-weight-bold">
                         Checkout
                     </button>
                 </div>

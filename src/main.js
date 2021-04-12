@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap'
 import BootstrapVue from 'bootstrap-vue'
 
-
 Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 

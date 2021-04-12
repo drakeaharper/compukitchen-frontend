@@ -13,6 +13,17 @@ body {
     border-radius: 30px;
 }
 
+.order-history-collapse-anchor:visited {
+    text-decoration: none;
+}
+
+.order-history-collapse-anchor:hover {
+    text-decoration: none;
+}
+
+.order-history-collapse-anchor-text:hover {
+    color: rgb(0, 130, 206) !important;
+}
 
 #view-container {
     padding-top: 100px;
@@ -115,7 +126,7 @@ form.custom-form {
 
 
 input, textarea {
-  border: 1px solid #eeeeee;
+  border: 1px solid #3b3737;
   box-sizing: border-box;
   margin: 0;
   outline: none;
@@ -139,7 +150,7 @@ input::-webkit-inner-spin-button {
 }
 
 .input-group input[type='button'] {
-  background-color: #eeeeee;
+  background-color: #a1a1a1;
   min-width: 38px;
   width: auto;
   transition: all 300ms ease;
