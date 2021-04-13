@@ -11,6 +11,7 @@ Vue.config.productionTip = false
 Vue.use(BootstrapVue)
 
 import '@/assets/base_styles.css'
+import './registerServiceWorker'
 
 new Vue({
   router,

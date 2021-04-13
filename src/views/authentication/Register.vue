@@ -19,7 +19,7 @@
                 <input v-model="password" type="password" class="form-control" id="password" placeholder="Password" />
             </div>
             <div class="form-group">
-                <button type="submit" class="btn btn-secondary">Register</button>
+                <button type="submit" @click="onSubmit()" class="btn btn-secondary">Register</button>
             </div>
         </form>
     </div>
@@ -49,7 +49,7 @@
                 const registerPromise = auth.registerUser(user)
                 const loginPromise = auth.login(user)
                 await Promise.all([registerPromise, loginPromise])
-                this.$router.push({ name: 'home' })
+                this.$router.push({ name: 'Home' })
             }
         }
     }

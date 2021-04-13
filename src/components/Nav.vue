@@ -27,17 +27,17 @@
                         </router-link>
                     </li>
                     <!-- IF ADMIN -->
-                    <li v-if="$store.state.isLoggedIn" class="nav-item">
+                    <li v-if="$store.state.isLoggedIn && $store.state.isAdmin" class="nav-item">
                         <router-link to="/create_item" class="nav-link" exact>
                             Create Item
                         </router-link>
                     </li>
-                    <li v-if="$store.state.isLoggedIn" class="nav-item">
+                    <li v-if="$store.state.isLoggedIn && $store.state.isAdmin" class="nav-item">
                         <router-link to="/manage_kitchen" class="nav-link" exact>
                             Manage Kitchen
                         </router-link>
                     </li>
-                    <li v-if="$store.state.isLoggedIn" class="nav-item">
+                    <li v-if="$store.state.isLoggedIn && $store.state.isAdmin" class="nav-item">
                         <router-link to="/process_submission" class="nav-link" exact>
                             Process Submissions
                         </router-link>
