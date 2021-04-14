@@ -59,11 +59,6 @@ const routes = [
     path: '/order_history',
     name: 'OrderHistory',
     component: OrderHistory
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   }
 ]
 
