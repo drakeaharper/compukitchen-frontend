@@ -126,15 +126,18 @@
                 result = result.data.submissions
                 for (let key in sorted) {
                     let already_submitted = false
-                    result.forEach(sub => {
-                        if (key === formatted_month() && sorted[key].year === current_date.getFullYear().toString()) {
-                            sorted[key].workflow_sate = "CurrentMonth"
-                            already_submitted = true
-                        } else if (sub.month === sorted[key].month_name) {
-                            sorted[key].workflow_sate = "Submitted"
-                            already_submitted = true
-                        }
-                    })
+                    if (key === formatted_month() && sorted[key].year === current_date.getFullYear().toString()) {
+                        sorted[key].workflow_sate = "CurrentMonth"
+                        already_submitted = true
+                    } else {
+                        result.forEach(sub => {
+                            if (sub.month === sorted[key].month_name) {
+                                sorted[key].workflow_sate = "Submitted"
+                                already_submitted = true
+                            }
+                        })
+                    }
+
                     if (!already_submitted) {
                         sorted[key].workflow_sate = "Submit"
                     }
