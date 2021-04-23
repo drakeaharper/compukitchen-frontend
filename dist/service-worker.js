@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.28521fbe9ac873548899e29ab0eb3154.js"
+  "/precache-manifest.ba3e90dfda0ea9a542ebd3a6d3fe524b.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "compukitchen"});
