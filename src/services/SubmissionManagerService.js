@@ -15,3 +15,7 @@ export function getSubmissionsForProcessing() {
 export function processSubmission(id, sub) {
     return http().put(`/api/process/${id}`, { submission: sub })
 }
+
+export function getProcessedSubmissions() {
+    return http().get(`/api/past_submissions`)
+}

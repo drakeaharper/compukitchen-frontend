@@ -11,50 +11,50 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <router-link to="/" class="nav-link" exact>
+                        <router-link to="/" class="nav-link" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" exact>
                             Home
                         </router-link>
                     </li>
                     <!-- IF LOGGED IN -->
                     <li v-if="$store.state.isLoggedIn" class="nav-item">
-                        <router-link to="/shop" class="nav-link" exact>
+                        <router-link to="/shop" class="nav-link" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" exact>
                             Shop
                         </router-link>
                     </li>
                     <li v-if="$store.state.isLoggedIn" class="nav-item">
-                        <router-link :to="{ name: 'OrderHistory', params: { id: $store.state.userId } }" class="nav-link" exact>
+                        <router-link :to="{ name: 'OrderHistory', params: { id: $store.state.userId } }" class="nav-link" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" exact>
                             Order History
                         </router-link>
                     </li>
                     <!-- IF ADMIN -->
                     <li v-if="$store.state.isLoggedIn && $store.state.isAdmin" class="nav-item">
-                        <router-link to="/create_item" class="nav-link" exact>
+                        <router-link to="/create_item" class="nav-link" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" exact>
                             Create Item
                         </router-link>
                     </li>
                     <li v-if="$store.state.isLoggedIn && $store.state.isAdmin" class="nav-item">
-                        <router-link to="/manage_kitchen" class="nav-link" exact>
+                        <router-link to="/manage_kitchen" class="nav-link" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" exact>
                             Manage Kitchen
                         </router-link>
                     </li>
                     <li v-if="$store.state.isLoggedIn && $store.state.isAdmin" class="nav-item">
-                        <router-link to="/process_submission" class="nav-link" exact>
+                        <router-link to="/process_submission" class="nav-link" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" exact>
                             Process Submissions
                         </router-link>
                     </li>
                     <!-- IF NOT LOGGED IN -->
                     <li v-if="!$store.state.isLoggedIn" class="nav-item">
-                        <router-link to="/register" class="nav-link" exact>
+                        <router-link to="/register" class="nav-link" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" exact>
                             Register
                         </router-link>
                     </li>
                     <li v-if="!$store.state.isLoggedIn" class="nav-item">
-                        <router-link to="/login" class="nav-link" exact>
+                        <router-link to="/login" class="nav-link" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" exact>
                             Login
                         </router-link>
                     </li>
                     <li v-if="$store.state.isLoggedIn" class="nav-item">
-                        <a v-on:click.prevent="logout()" class="nav-link" href="#">Logout</a>
+                        <a v-on:click.prevent="logout()" class="nav-link" href="#" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" exact>Logout</a>
                     </li>
                     <li class="nav-item">
                         <!-- Display the current user's username in the navbar -->

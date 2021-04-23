@@ -1,7 +1,3 @@
-* {
-    color: rgb(0, 0, 0);
-}
-
 body {
     background-image: url('./wood-2045380_1920.jpg');
     height: 100%;
@@ -21,7 +17,11 @@ body {
     text-decoration: none;
 }
 
-.order-history-collapse-anchor-text:hover {
+.order-history-collapse-anchor-text, .order-history-header-icon {
+    color: rgb(0, 0, 0);
+}
+
+.order-history-collapse-anchor-text:hover, .order-history-header-icon:hover {
     color: rgb(0, 130, 206) !important;
 }
 
@@ -34,7 +34,7 @@ body {
 }
 
 .custom-bg-dark {
-    background-color: #373f46 !important;
+    background-color: #1F405A !important;
 }
 
 nav.navbar {

@@ -5,13 +5,15 @@ import store from './store'
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap'
-import BootstrapVue from 'bootstrap-vue'
-
-Vue.config.productionTip = false
-Vue.use(BootstrapVue)
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 
 import '@/assets/base_styles.css'
 import './registerServiceWorker'
+
+Vue.config.productionTip = false
+Vue.use(BootstrapVue)
+Vue.use(BootstrapVueIcons)
+
 
 new Vue({
   router,
