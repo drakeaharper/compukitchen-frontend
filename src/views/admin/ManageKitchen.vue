@@ -34,8 +34,7 @@
     import * as item_manager from '../../services/ItemManagerService'
 
     export default {
-        name: 'manage_roles',
-        currentQuizId: null,
+        name: 'manage_kitchen',
         data: function() {
             return {
                 food_items: null

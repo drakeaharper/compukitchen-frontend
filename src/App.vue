@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <Nav/>
+    <show-at breakpoint="smallAndAbove">
+      <NavMobile/>
+    </show-at>
+    <hide-at breakpoint="small">
+      <Nav/>
+    </hide-at>
     <div id="view-container" class="m-2">
       <router-view/>
     </div>
@@ -9,13 +14,16 @@
 
 <script>
 import Nav from './components/Nav'
-// import Footer from './components/Footer'
+import NavMobile from './components/NavMobile'
+import {showAt, hideAt} from 'vue-breakpoints'
 
 export default {
   name: 'App',
   components: {
-    Nav
-    // Footer
+    Nav,
+    NavMobile,
+    hideAt,
+    showAt
   },
   beforeCreate: function() {
     this.$store.dispatch('authenticate')

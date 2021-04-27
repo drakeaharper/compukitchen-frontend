@@ -74,8 +74,7 @@
     import {showAt} from 'vue-breakpoints'
 
     export default {
-        name: 'manage_roles',
-        currentQuizId: null,
+        name: 'order_history',
         components: { showAt },
         data: function() {
             return {

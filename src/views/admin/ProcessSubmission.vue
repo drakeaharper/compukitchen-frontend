@@ -68,7 +68,6 @@
 
     export default {
         name: 'process_submissions',
-        currentQuizId: null,
         components: { showAt },
         data: function() {
             return {

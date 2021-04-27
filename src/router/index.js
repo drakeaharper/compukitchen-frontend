@@ -9,6 +9,7 @@ import CreateItem from '../views/admin/CreateItem.vue'
 import EditItem from '../views/admin/EditItem.vue'
 import ManageKitchen from '../views/admin/ManageKitchen.vue'
 import ProcessSubmission from '../views/admin/ProcessSubmission.vue'
+import AdminControls from '../views/admin/AdminControls.vue'
 import Shop from '../views/general/Shop.vue'
 import OrderHistory from '../views/general/OrderHistory.vue'
 
@@ -49,6 +50,11 @@ const routes = [
     path: '/process_submission',
     name: 'ProcessSubmission',
     component: ProcessSubmission
+  },
+  {
+    path: '/admin_controls',
+    name: 'AdminControls',
+    component: AdminControls
   },
   {
     path: '/shop',

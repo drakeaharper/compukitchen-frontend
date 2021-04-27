@@ -123,9 +123,8 @@
     import {showAt, hideAt} from 'vue-breakpoints'
 
     export default {
-        name: 'manage_roles',
+        name: 'shopping_center',
         components: { hideAt, showAt },
-        currentQuizId: null,
         data: function() {
             return {
                 food_items: '',
