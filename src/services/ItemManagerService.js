@@ -9,11 +9,11 @@ export function listFoodItems() {
 }
 
 export function getItem(id) {
-    return http().get(`/api/food_item/${id}`, {id: id})
+    return http().get(`/api/food_item/${id}`, {id})
 }
 
 export function updateItem(updated_item, id) {
-    return http().put(`/api/food_item/${id}`, {id: id, updated_item: updated_item})
+    return http().put(`/api/food_item/${id}`, {id, updated_item})
 }
 
 export function deleteItem(id) {
