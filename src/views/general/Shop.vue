@@ -140,6 +140,7 @@
                     return (item.quantity > 0 ) ? item : undefined
                 })
                 let temp = available.filter(a => a !== undefined)
+                console.table(temp)
                 vm.food_items = temp
                 })
             })
