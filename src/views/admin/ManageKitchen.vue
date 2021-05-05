@@ -1,6 +1,6 @@
 <template>
     <div class="page-content-holder p-2 m-2">
-        <h1>This is the MANAGE KITCHEN view</h1>
+        <h1>Storehouse view</h1>
         <div class="row mx-3 my-2">
             <div class="col-sm font-weight-bold">
                 Name

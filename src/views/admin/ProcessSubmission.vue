@@ -1,6 +1,6 @@
 <template>
     <div class="page-content-holder p-2 m-2">
-        <h1>Unprocessed Submissions</h1>
+        <h1>Unprocessed</h1>
         <show-at breakpoint="mediumAndAbove">
             <div class="mx-2 my-3 px-2 pt-2">
                 <div class="row">

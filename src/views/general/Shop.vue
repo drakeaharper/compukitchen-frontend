@@ -1,6 +1,6 @@
 <template>
     <div class="page-content-holder p-2 m-2">
-        <h1>This is the SHOP view</h1>
+        <h1>Kitchen</h1>
         <div class="d-flex">
             <div class="mx-3 my-2" style="width: 50%;">
                 <hide-at breakpoint="small">

@@ -1,6 +1,6 @@
 <template>
     <div id="order_history_parent" class="page-content-holder p-2 m-2">
-        <h1>This is the ORDER HISTORY view</h1>
+        <h1>Order Histroy</h1>
         <div class="border border-dark mx-2 my-3 px-2 pt-2" v-for="month of order_history" v-bind:key="month.month_name">
             <a
                 class="order-history-collapse-anchor"
