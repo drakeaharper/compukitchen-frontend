@@ -37,7 +37,6 @@
             user_manager.getAllUsers()
             .then(res => {
                 next(vm => {
-                    console.table(res.data.users)
                     vm.users = res.data.users
                 })
             })

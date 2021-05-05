@@ -98,7 +98,6 @@
                 );
 
                 let grouped = groupBy(submissions.past.data.submissions, 'month')
-                console.log(grouped)
                 next(vm => {
                     vm.submissions = submissions.to_process
                     vm.past_submissions = grouped

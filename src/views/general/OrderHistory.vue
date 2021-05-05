@@ -117,7 +117,6 @@
                 return sorted_orders
             })
             .then(async sorted => {
-                console.log(sorted)
                 let current_date = new Date()
                 let formatted_month = () => {
                     let current_month = current_date.getMonth() + 1
